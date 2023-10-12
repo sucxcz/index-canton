@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function a() {
+            window.alert('Привет мир!');
+            let zarplata = prompt('Введите сумму зарплаты', 1000);
+            let premia = zarplata / 100 * 15;
+            let pp = parseFloat(zarplata) + premia;
+            window.alert(pp);
+            let nalogi = pp / 100 * 10;
+            let zarplat = parseFloat(pp) - nalogi;
+            window.alert(zarplat);
+            let magazin = parseFloat(zarplat) - 190;
+            window.alert(magazin);
+            let polovina = parseFloat(magazin) / 2;
+            window.alert(polovina);
+        }
+        function b() {
+            window.alert('Задумайте число');
+            window.alert('Умножьте это число на 2!');
+            window.alert('Прибавьте к полученному результату 7!');
+            let izipizi = prompt('Введите то, что получилось');
+            x = (parseFloat(izipizi) - 7) / 2;
+            window.alert(x);
+        }
+        function c() {
+            let student1 = prompt('Введите имя и фамилию студента 1');
+            let student2 = prompt('Введите имя и фамилию студента 2');
+            let student3 = prompt('Введите имя и фамилию студента 3');
+            document.write(student1 + '<br>');
+            document.write(student2 + '<br>');
+            document.write(student3 + '<br>');
+            document.write('<ol>');
+            document.write('<li>' + student1 + '</li>');
+            document.write('<li>' + student2 + '</li>');
+            document.write('<li>' + student3 + '</li>');
+            document.write('</ol>');    
+        }
+        function plus(){
+            let num1 = parseFloat(document.getElementById('num1').value);
+            let num2 = parseFloat(document.getElementById('num2').value);
+            let result = num1 + num2;
+            displayResult(result);
+        }
+        function minus(){
+            let num1 = parseFloat(document.getElementById('num1').value);
+            let num2 = parseFloat(document.getElementById('num2').value);
+            let result = num1 - num2;
+            displayResult(result);
+        }
+        function displayResult(result){
+            document.getElementById('resultParagraph').textContent = 'Результат:' + result;
+        }
+    </script>
+    <button onclick="a()"> Задание 1 </button>
+    <button onclick="b()"> Задание 2 </button>
+    <button onclick="c()"> Задание 3 </button>
+    <p>1st Number: <input type="number" id="num1"> </p> 
+    <p> 2nd Number: <input type="number" id="num2"> </p> 
+    <button onclick="plus()">Multiply</button>
+    <button onclick="minus()">Divide</button>
+    <p id="resultParagraph">Результат:</p>
+</body>
+</html>
